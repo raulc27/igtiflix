@@ -27,3 +27,17 @@ def delete(request,id):
         return render(request,'genero/genero.html',data_dict)
     except:
         return HttpResponseNotAllowed()
+
+def update(request,id):
+    item = models.Genero.objects.get(id=id);
+    if request.method=="GET":
+        form = forms.GeneroForm(initial={'descricao':item.descricao})
+        data_dict = {'form':form}
+        return render(request,'genero/genero_upd.html',data_dict)
+    else:
+        form = forms.GeneroForm(request.POST)
+        item.descricao = form.data['descricao']
+        item.save()
+        generos_list = models.Genero.objects.order_by('descricao')
+        data_dict={'form':form,'generos_records':generos_list}
+        return render(request,'genero/genero.html',data_dict)

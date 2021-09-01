@@ -29,7 +29,7 @@
                     {% for genero in generos_records %}
                     <tr>
                     <td>{{ genero.descricao }}</td>
-                    <td><button class="list-button editar-button">Alterar</button></td>
+                    <td><button class="list-button editar-button" onClick="updateItem({{ genero.id }})" >Alterar</button></td>
                     <td><button class="list-button apagar-button" onClick="deleteItem({{ genero.id }})">Excluir</button></td>
                     </tr>
                     {% endfor %}
@@ -39,11 +39,13 @@
             <p>Nenhum dado cadastrado</p>
             {% endif %}
         </div>
+        <div class="divForm">
         <form onsubmit="/genero" id="form-genero" method="post">
             {{form}}
             {% csrf_token %}
             <input type="submit" id="submit-button" value="Enviar" />
         </form>
+        </div>
     </div>
 </div>
 
@@ -73,6 +75,11 @@
             }
         )
     }
+
+    function updateItem(id){
+        location.replace('/genero/update/'+id);
+    }
+
 </script>
 
 </body>
