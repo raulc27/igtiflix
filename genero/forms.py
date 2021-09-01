@@ -1,6 +1,6 @@
 from django import forms
 from genero.models import Genero
-class GeneroForm(forms.Form):
+class GeneroForm(forms.ModelForm):
   #  def __init__(self, *args, **kwargs):
   #      super(GeneroForm, self).__init__(*args, **kwargs)
   #      self.fields('descricao').error_messages={'required':'Campo Obrigatorio'}
