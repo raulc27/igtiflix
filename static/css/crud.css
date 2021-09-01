@@ -30,5 +30,36 @@ form label {
 }
 
 .divForm{
-    background-color: blue;
+   
+}
+
+table{
+    margin: 30px;
+    text-align: center;
+}
+
+thead{
+    background: #20c997;
+    color: white;
+    font-weight: bold;
+}
+
+td,th{
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+
+.list-button{
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 1em;
+}
+
+.apagar-button{
+    background: mediumslateblue;
+}
+
+.editar-button{
+    background: darkseagreen;
 }
