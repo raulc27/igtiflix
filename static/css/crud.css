@@ -57,9 +57,13 @@ td,th{
 }
 
 .apagar-button{
-    background: mediumslateblue;
+    background: red;
+    color: white;
+    font-weight: bold;
 }
 
 .editar-button{
     background: darkseagreen;
+    color: white;
+    font-weight: bold;
 }

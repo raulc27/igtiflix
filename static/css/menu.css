@@ -22,3 +22,7 @@ li a:hover {
     font-weight: bolder;
     background: #00a293;
 }
+
+body{
+    font-family: arial;
+}

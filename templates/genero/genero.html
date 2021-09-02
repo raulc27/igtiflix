@@ -21,16 +21,17 @@
                 <thead>
                     <tr>
                         <th>Gênero</th>
-                        <th>Click para alterar</th>
-                        <th>Clique para excluir</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for genero in generos_records %}
                     <tr>
                     <td>{{ genero.descricao }}</td>
-                    <td><button class="list-button editar-button" onClick="updateItem({{ genero.id }})" >Alterar</button></td>
-                    <td><button class="list-button apagar-button" onClick="deleteItem({{ genero.id }})">Excluir</button></td>
+                    <td>
+                    <button class="list-button editar-button" onClick="updateItem({{ genero.id }})" >Alterar</button>
+                    <button class="list-button apagar-button" onClick="deleteItem({{ genero.id }})">Excluir</button>
+                     </td>
                     </tr>
                     {% endfor %}
                 </tbody>
